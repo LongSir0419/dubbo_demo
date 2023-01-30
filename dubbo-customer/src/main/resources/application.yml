@@ -1,2 +1,18 @@
 server:
   port: 8082
+
+spring:
+  application:
+    name: customer
+# 配置dubbo
+### 服务提供者声明名称:必须保证服务名唯一性,它的名称是dubbo内部使用的唯一标识
+dubbo:
+  application:
+    name: dubbo-${spring.application.name}
+  ### 将服务提供者的地址暴露出去。这个过程通过zookeeper实现服务注册中心，进行注册暴露
+  registry:
+    address: zookeeper://101.42.175.42:2181
+  ### 将服务提供者的端口号暴露出去
+  protocol:
+    name: dubbo
+    port: -1

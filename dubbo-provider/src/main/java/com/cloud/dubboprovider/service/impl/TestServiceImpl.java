@@ -1,14 +1,14 @@
 package com.cloud.dubboprovider.service.impl;
 
 import com.cloud.dubboapi.service.TestService;
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
 /**
  * @author ext.wanghailong6
  * @email ext.wanghailong6@jd.com
  * @date 2023-01-29 11:16
  */
-@Service
+@DubboService
 public class TestServiceImpl implements TestService {
 
     @Override

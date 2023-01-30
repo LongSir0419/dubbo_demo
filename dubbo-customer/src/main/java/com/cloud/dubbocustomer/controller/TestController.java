@@ -1,7 +1,7 @@
 package com.cloud.dubbocustomer.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.cloud.dubboapi.service.TestService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Reference
+    @DubboReference
     private TestService testService;
 
     @GetMapping("/test")
